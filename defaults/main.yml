@@ -733,7 +733,7 @@ ubtu24cis_screensaver_lock_delay: 5
 ## Control 2.3.1.1
 # This variable choses the tool used for time synchronization
 # The two options are `chrony`and `systemd-timesyncd`.
-ubtu24cis_time_sync_tool: "systemd-timesyncd"
+ubtu24cis_time_sync_tool: "chrony"
 
 ## Controls 2.3.x - Configure time pools & servers for chrony and timesyncd
 # The following variable represents a list of of time server pools used

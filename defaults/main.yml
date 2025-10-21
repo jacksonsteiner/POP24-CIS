@@ -632,17 +632,17 @@ ubtu24cis_ipv4_required: true
 
 ## IPv6 requirement toggle
 # This variable governs whether ipv6 is enabled or disabled.
-ubtu24cis_ipv6_required: false
+ubtu24cis_ipv6_required: true
 
 ## Desktop requirement toggle
 # This variable governs, whether CIS rules regarding GDM
 # and X-Windows are carried out.
-ubtu24cis_desktop_required: false
+ubtu24cis_desktop_required: true
 
 ## Purge apt packages
 # This will allow the purging of any packages that are marked to be removed
 # This will also purge any packages not removed via this playbook
-ubtu24cis_purge_apt: false
+ubtu24cis_purge_apt: true
 
 ## Ignore change_when for apt update task
 # Modifies behavior of 'changed_when' for 'apt update' task  in prelim that always changes
@@ -808,6 +808,7 @@ ubtu24cis_ufw_use_sysctl: true
 # If you want to allow outbound traffic on all ports, set the variable to  `all`, e.g.,
 # `ubtu24cis_ufw_allow_out_ports: "all"`.
 ubtu24cis_ufw_allow_out_ports:
+  - 22
   - 53
   - 80
   - 443
@@ -927,8 +928,6 @@ ubtu24cis_sudo_logfile: "/var/log/sudo.log"
 ## control 5.2.4 sudoers NOPASSWD
 # This will leave NOPASSWD intact for these users
 ubtu24cis_sudoers_exclude_nopasswd_list:
-  - ec2-user
-  - vagrant
 
 ##  Control 5.2.6
 # This variable sets the duration (in minutes) during which a user's authentication credentials

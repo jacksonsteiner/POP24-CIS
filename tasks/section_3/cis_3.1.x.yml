@@ -93,13 +93,13 @@
     - rule_3.1.3
     - NIST800-53R5_CM-7
   block:
-    - name: "3.1.3 | PATCH | Ensure bluetooth services are not in use | pkg"
-      when:
-        - not ubtu24cis_bluetooth_service
-        - not ubtu24cis_bluetooth_mask
-      ansible.builtin.package:
-        name: bluez
-        state: absent
+    # - name: "3.1.3 | PATCH | Ensure bluetooth services are not in use | pkg"
+    #   when:
+    #     - not ubtu24cis_bluetooth_service
+    #     - not ubtu24cis_bluetooth_mask
+    #   ansible.builtin.package:
+    #     name: bluez
+    #     state: absent
 
     - name: "3.1.3 | PATCH | Ensure bluetooth services are not in use | mask"
       when:
